@@ -1,0 +1,49 @@
+/* src/index.css (o donde tengas tus estilos globales) */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 2rem;
+}
+
+.lista-imagenes-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-imagenes {
+  display: grid;
+  /* Creamos un grid responsive */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.tarjeta-imagen {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden; /* Para que la imagen respete el borde redondeado */
+  transition: transform 0.2s ease;
+}
+
+.tarjeta-imagen:hover {
+  transform: translateY(-5px);
+}
+
+.tarjeta-imagen img {
+  width: 100%;
+  height: 200px; /* Alto fijo para las imágenes */
+  object-fit: cover; /* Recorta la imagen para que encaje */
+  display: block;
+}
+
+.tarjeta-info {
+  padding: 15px;
+}
+
+.tarjeta-info p {
+  margin: 0 0 8px 0;
+}
